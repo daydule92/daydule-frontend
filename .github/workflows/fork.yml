@@ -1,0 +1,14 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh repo sync Mellbrother/daydule-backend
+        env:
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
