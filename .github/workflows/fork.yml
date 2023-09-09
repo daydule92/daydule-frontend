@@ -9,6 +9,6 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - run: gh repo sync Mellbrother/daydule-backend
+      - run: gh repo sync daydule92/daydule-frontend
         env:
           GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
